@@ -1,4 +1,4 @@
-package student1
+package main
 
 import (
 	"fmt"
@@ -11,3 +11,5 @@ func TestStudentSayHi(t *testing.T) {
 	s.SayHi()
 	fmt.Printf("name is %s\n", s.name)
 }
+
+

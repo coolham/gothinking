@@ -1,4 +1,4 @@
-package student1
+package main
 
 import "fmt"
 
@@ -27,4 +27,11 @@ func (s *Student) Init(name string, age int, major string) {
 
 func (s Student) SayHi() {
 	fmt.Printf("Hi, I am  %s aged %d, and my major is %s\n", s.name, s.age, s.major)
+}
+
+func main() {
+	s := Student{}
+	s.Init("John", 25, "cs")
+	s.SayHi()
+	fmt.Printf("name is %s\n", s.name)
 }
