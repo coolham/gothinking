@@ -27,8 +27,8 @@ func (c Customer) GetName() string {
 func (c Customer) Statement() string {
 	var totalAmount float64      //消费总额
 	var frequentRenterPoints int //常客积分
-	var result string = "Rental Record for " + c.GetName() + ":\n"
-	for _, r := range c.rentals {
+	var result = "Rental Record for " + c.GetName() + ":\n"
+	for index, r := range c.rentals {
 		thisAmount := 0.0
 
 		// determine amounts for each record ,  各种片子价格不同
@@ -57,7 +57,7 @@ func (c Customer) Statement() string {
 		}
 
 		//show figures for this rental (显示此次租赁的数据)
-		thisResult := fmt.Sprintf("\t%s\t%.2f\n", aMovie.Title, thisAmount)
+		thisResult := fmt.Sprintf("\t%d. %s\t%.2f\n", index+1, aMovie.Title, thisAmount)
 		result += thisResult
 		totalAmount += thisAmount
 	}

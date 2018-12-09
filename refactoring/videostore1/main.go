@@ -32,11 +32,13 @@ import (
 结果示例：
 
 Rental Record for Tom:
-	The Godfather	6.50
-	Fast & Furious	3.00
+	1. The Godfather	6.50
+	2. Fast & Furious	3.00
 Amount owned is 9.50
 Tom earned 2 frequent renter points.
 
+备注：
+videostore1.pos  使用 https://www.processon.com 浏览
 
 */
 
