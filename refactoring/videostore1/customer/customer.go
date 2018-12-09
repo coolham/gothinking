@@ -29,8 +29,8 @@ func (c Customer) Statement() string {
 	var frequentRenterPoints int //常客积分
 	var result = "Rental Record for " + c.GetName() + ":\n"
 	for index, r := range c.rentals {
-		thisAmount := 0.0
 
+		thisAmount := 0.0
 		// determine amounts for each record ,  各种片子价格不同
 		aMovie := r.AMovie
 		switch aMovie.PriceCode {
