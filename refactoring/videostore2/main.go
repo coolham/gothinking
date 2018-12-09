@@ -17,6 +17,20 @@ import (
 * 因为amountFor中用到的信息是Rental中的，并没有用到Customer中的信息
 * 提取出一个新方法GetCharge， 放到Rental中
 
+3. 测试
+* 做每一步重构后一定要及时测试
+* 不做等积累很多修改后再做测试，不利于查找问题
+
+4. 再看amountFor方法
+* 发现amountFor方法只有一行，就是调用Rental的GetCharge方法
+* 因此，Statement可以直接调用GetCharge方法
+
+5. 回过头再看Statement方法
+* 发现thisAmount变量是多余的
+* 尽可能删除临时变量
+
+
+
 
 
 Goland，对Statement中计算租金的代码右键:
