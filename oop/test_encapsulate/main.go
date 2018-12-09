@@ -1,8 +1,8 @@
 package main
 
 import (
+	"coolgo/oop/student1"
 	"fmt"
-	"gothinking/oop/student1"
 	"gothinking/oop/student2"
 )
 
