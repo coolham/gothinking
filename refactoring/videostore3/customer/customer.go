@@ -10,7 +10,7 @@ import (
 重构：
 1. 把计算每一个租金的方法充Statement中抽取出来，形成新的amountFor()方法
 2. amountFor() 参数更合理的命名
-3. amountFor()中计算租金，只用了了rental，并没有用到customer， 放在customer中不合理，继续抽取
+3. amountFor()中计算租金，只用了rental，并没有用到customer， 放在customer中不合理，继续抽取
 3. struct中作用域, 不暴露内部信息
 */
 
