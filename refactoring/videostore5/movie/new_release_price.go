@@ -8,7 +8,7 @@ func (n NewReleasePrice) GetPriceCode() int {
 }
 
 func (n NewReleasePrice) GetCharge(daysRented int) float64 {
-	return float64(daysRented * 3.0)
+	return float64(daysRented * 3)
 }
 
 func (n NewReleasePrice) GetFrequentRenterPoints(daysRented int) int {

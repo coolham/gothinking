@@ -37,14 +37,14 @@ func (c Customer) Statement() string {
 		case movie.REGULAR:
 			thisAmount += 2
 			if r.DaysRented > 2 {
-				thisAmount += float64(r.DaysRented-2) * float64(1.5)
+				thisAmount += float64(r.DaysRented-2) * 1.5
 			}
 		case movie.NEW_RELEASE:
-			thisAmount += float64(r.DaysRented) * float64(3)
+			thisAmount += float64(r.DaysRented) * 2
 		case movie.CHILDREN:
 			thisAmount += 1.5
 			if r.DaysRented > 3 {
-				thisAmount += float64(r.DaysRented-3) * float64(1.5)
+				thisAmount += float64(r.DaysRented-3) * 1.5
 			}
 		}
 

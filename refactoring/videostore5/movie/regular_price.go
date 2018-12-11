@@ -10,7 +10,7 @@ func (r RegularPrice) GetPriceCode() int {
 func (r RegularPrice) GetCharge(daysRented int) float64 {
 	result := 2.0
 	if daysRented > 2 {
-		result += float64(daysRented-2) * float64(1.5)
+		result += float64(daysRented-2) * 1.5
 	}
 	return result
 }

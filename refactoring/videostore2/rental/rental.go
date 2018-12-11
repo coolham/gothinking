@@ -33,14 +33,14 @@ func (r Rental) GetCharge() float64 {
 	case movie.REGULAR:
 		thisAmount += 2
 		if r.daysRented > 2 {
-			thisAmount += float64(r.daysRented-2) * float64(1.5)
+			thisAmount += float64(r.daysRented-2) * 1.5
 		}
 	case movie.NEW_RELEASE:
-		thisAmount += float64(r.daysRented) * float64(3)
+		thisAmount += float64(r.daysRented) * 3
 	case movie.CHILDREN:
 		thisAmount += 1.5
 		if r.daysRented > 3 {
-			thisAmount += float64(r.daysRented-3) * float64(1.5)
+			thisAmount += float64(r.daysRented-3) * 1.5
 		}
 	}
 	return thisAmount

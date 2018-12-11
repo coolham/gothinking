@@ -1,9 +1,9 @@
 package movie
 
 const (
-	REGULAR          = iota //0
-	NEW_RELEASE             //1
-	CHILDREN                // 2
+	REGULAR     = iota //0
+	NEW_RELEASE        //1
+	CHILDREN           // 2
 )
 
 type Movie struct {
@@ -25,14 +25,14 @@ func (m Movie) GetCharge(daysRented int) float64 {
 	case REGULAR:
 		result += 2
 		if daysRented > 2 {
-			result += float64(daysRented-2.0) * float64(1.5)
+			result += float64(daysRented-2.0) * 1.5
 		}
 	case NEW_RELEASE:
-		result += float64(daysRented) * float64(3)
+		result += float64(daysRented) * 3
 	case CHILDREN:
 		result += 1.5
 		if daysRented > 3 {
-			result += float64(daysRented-3) * float64(1.5)
+			result += float64(daysRented-3) * 1.5
 		}
 	}
 	return result
