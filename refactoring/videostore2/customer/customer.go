@@ -77,7 +77,7 @@ func (c Customer)amountFor(aRental rental.Rental) float64 {
 		}
 	case movie.NEW_RELEASE:
 		thisAmount += float64(aRental.DaysRented) * float64(3)
-	case movie.CHILDRES:
+	case movie.CHILDREN:
 		thisAmount += 1.5
 		if aRental.DaysRented > 3 {
 			thisAmount += float64(aRental.DaysRented-3) * float64(1.5)

@@ -1,9 +1,9 @@
 package movie
 
 const (
-	REGULAR     = iota //0  普通电影
-	NEW_RELEASE        //1  新发行电影
-	CHILDRES           //2  儿童电影
+	REGULAR          = iota //0  普通电影
+	NEW_RELEASE             //1  新发行电影
+	CHILDREN                //2  儿童电影
 )
 
 type Movie struct {

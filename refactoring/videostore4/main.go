@@ -42,7 +42,7 @@ func main() {
 	aCustomer.AddRental(rental2)
 
 	var rental3 rental.Rental
-	movie3 := movie.Movie{Title: "Casablanca", PriceCode: movie.CHILDRES}
+	movie3 := movie.Movie{Title: "Casablanca", PriceCode: movie.CHILDREN}
 	rental3.Init(movie3, 7)
 	aCustomer.AddRental(rental3)
 
