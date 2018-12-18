@@ -49,7 +49,8 @@ func main() {
 	rental1 := rental.Rental{AMovie: movie.Movie{Title: "The Godfather", PriceCode: movie.REGULAR}, DaysRented: 5}
 	aCustomer.AddRental(rental1)
 
-	rental2 := rental.Rental{AMovie: movie.Movie{Title: "Fast & Furious", PriceCode: movie.NEW_RELEASE}, DaysRented: 1}
+	movie2 := movie.Movie{Title: "Fast & Furious", PriceCode: movie.NEW_RELEASE }
+	rental2 := rental.Rental{AMovie: movie2, DaysRented: 1}
 	aCustomer.AddRental(rental2)
 
 	result := aCustomer.Statement()
