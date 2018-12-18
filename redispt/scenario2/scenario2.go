@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"github.com/garyburd/redigo/redis"
 	"log"
@@ -24,10 +25,15 @@ import (
 
 */
 
-var pool *redis.Pool
+var (
+	redisAddress string
+	pool         *redis.Pool
+)
 
 func init() {
-	redisAddress := "192.168.3.158:6379"
+	flag.StringVar(&redisAddress, "s", "127.0.0.1:6379", "redis server address")
+	flag.Parse()
+
 	poolSize := 20
 	pool = &redis.Pool{
 		MaxIdle:     poolSize,

@@ -5,7 +5,7 @@ import (
 	"github.com/garyburd/redigo/redis"
 )
 
-var redisAddr = "192.168.3.158:6379"
+var redisAddr = "127.0.0.1:6379"
 
 func main() {
 	c, err := redis.Dial("tcp", redisAddr)

@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"github.com/garyburd/redigo/redis"
 )
@@ -11,12 +12,18 @@ import (
 
 */
 
-var redisAddr = "192.168.3.158:6379"
+var (
+	redisAddr string
+)
 
 func main() {
+
+	flag.StringVar(&redisAddr, "s", "127.0.0.1:6379", "redis server address")
+	flag.Parse()
+
 	c, err := redis.Dial("tcp", redisAddr)
 	if err != nil {
-		fmt.Println("connect to redispt error:", err)
+		fmt.Println("connect to redis error:", err)
 		return
 	}
 	defer c.Close()
